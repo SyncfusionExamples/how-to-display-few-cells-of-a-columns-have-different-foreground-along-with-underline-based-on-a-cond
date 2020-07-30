@@ -3,35 +3,19 @@
 How to display few cells of a columns have different foreground along with underline based on a condition in WPF DataGrid (SfDataGrid)?
 # About the sample
 
-In SfDataGrid, you can display few cells of columns have different foreground along with underline based on conditions.
+In SfDataGrid, you can display few cells of columns have different foreground along with underline based on conditions by modifying its CellTemplate.
 
 ```xml
 <Window.Resources>
     <local:WbsElementToHyperLinkConverter x:Key="WbsElementToHyperLinkConverter"/>
-    <Style x:Key="SymbolCellStyle1" TargetType="syncfusion:GridCell">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="syncfusion:GridCell">
-                    <Border x:Name="PART_RowHeaderCellBorder"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                        <!--RowIndex is displayed here -->
-                        <TextBlock  Text="{Binding Path=OrderID}" 
-                                            TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}" 
-                                            Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 </Window.Resources>
 
 <syncfusion:GridTextColumn MappingName="OrderID" AllowFiltering="False" MinimumWidth="10" Width="90" >
     <syncfusion:GridTextColumn.CellTemplate>
         <DataTemplate>
             <TextBlock  Text="{Binding Path=OrderID}"  
-            TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}"
-            Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
+        TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}"  
+        Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
         </DataTemplate>
     </syncfusion:GridTextColumn.CellTemplate>
 </syncfusion:GridTextColumn>
