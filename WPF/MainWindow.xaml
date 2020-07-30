@@ -14,29 +14,12 @@
 
 <Window.Resources>
     <local:WbsElementToHyperLinkConverter x:Key="WbsElementToHyperLinkConverter"/>
-    <Style x:Key="SymbolCellStyle1" TargetType="syncfusion:GridCell">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="syncfusion:GridCell">
-                    <Border x:Name="PART_RowHeaderCellBorder"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                        <!--RowIndex is displayed here -->
-                        <TextBlock  Text="{Binding Path=OrderID}" 
-                                            TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}" 
-                                            Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 </Window.Resources>
  
     <Grid>
         <syncfusion:SfDataGrid x:Name="sfDataGrid" 
                                ItemsSource="{Binding Path=Orders}"
                                AutoGenerateColumns="False">
-            
             <syncfusion:SfDataGrid.Columns>
                 <syncfusion:GridTextColumn MappingName="OrderID" AllowFiltering="False" MinimumWidth="10" Width="90" >
                     <syncfusion:GridTextColumn.CellTemplate>
