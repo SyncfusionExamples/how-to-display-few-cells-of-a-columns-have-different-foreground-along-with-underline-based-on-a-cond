@@ -10,16 +10,15 @@ In SfDataGrid, you can display few cells of columns have different foreground al
     <local:WbsElementToHyperLinkConverter x:Key="WbsElementToHyperLinkConverter"/>
 </Window.Resources>
 
-<syncfusion:GridTextColumn MappingName="OrderID" AllowFiltering="False" MinimumWidth="10" Width="90" >
+<syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" AllowFiltering="False" MinimumWidth="10" Width="90" >
     <syncfusion:GridTextColumn.CellTemplate>
         <DataTemplate>
             <TextBlock  Text="{Binding Path=OrderID}"  
-        TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}"  
-        Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
+            TextDecorations="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=TextDecorations}"  
+            Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
         </DataTemplate>
     </syncfusion:GridTextColumn.CellTemplate>
-</syncfusion:GridTextColumn>
-```
+</syncfusion:GridTextColumn>```
 ```c#
 public class WbsElementToHyperLinkConverter : IValueConverter
 {
