@@ -21,7 +21,7 @@
                                ItemsSource="{Binding Path=Orders}"
                                AutoGenerateColumns="False">
             <syncfusion:SfDataGrid.Columns>
-                <syncfusion:GridTextColumn MappingName="OrderID" AllowFiltering="False" MinimumWidth="10" Width="90" >
+                <syncfusion:GridTextColumn MappingName="OrderID" HeaderText="Order ID" AllowFiltering="False" MinimumWidth="10" Width="90" >
                     <syncfusion:GridTextColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock  Text="{Binding Path=OrderID}"  
@@ -30,10 +30,10 @@
                         </DataTemplate>
                     </syncfusion:GridTextColumn.CellTemplate>
                 </syncfusion:GridTextColumn>
-                <syncfusion:GridTextColumn MappingName="CustomerID" />
-                <syncfusion:GridTextColumn MappingName="CustomerName" />
-                <syncfusion:GridTextColumn MappingName="Country" />
-                <syncfusion:GridCurrencyColumn MappingName="UnitPrice"/>
+                <syncfusion:GridTextColumn MappingName="CustomerID" HeaderText="Customer ID" />
+                <syncfusion:GridTextColumn MappingName="CustomerName" HeaderText="Customer Name" />
+                <syncfusion:GridTextColumn MappingName="Country"  />
+                <syncfusion:GridCurrencyColumn MappingName="UnitPrice" HeaderText="Unit Price"/>
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </Grid>
