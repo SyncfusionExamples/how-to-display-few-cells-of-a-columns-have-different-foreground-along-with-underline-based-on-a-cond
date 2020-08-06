@@ -3,7 +3,7 @@
 How to display few cells of a columns have different foreground along with underline based on a condition in WPF DataGrid (SfDataGrid)?
 # About the sample
 
-In SfDataGrid, you can display few cells of columns have different foreground along with underline based on conditions by modifying its CellTemplate.
+SfDataGrid does not have direct properties to display few cells of columns have different foreground along with underline based on condition. You can achieve this by adding converter for foreground and underline then bind this to the required cell through CellTemplate.
 
 ```xml
 <Window.Resources>
