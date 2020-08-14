@@ -18,7 +18,8 @@ You can apply the conditional styling for GridColumn by using Converter and Cell
             Foreground="{Binding Converter={StaticResource WbsElementToHyperLinkConverter},ConverterParameter=ForeGround}" />
         </DataTemplate>
     </syncfusion:GridTextColumn.CellTemplate>
-</syncfusion:GridTextColumn>```
+</syncfusion:GridTextColumn>
+```
 ```c#
 public class WbsElementToHyperLinkConverter : IValueConverter
 {
