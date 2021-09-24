@@ -44,5 +44,8 @@ public class WbsElementToHyperLinkConverter : IValueConverter
     }
 }
 ```
+
+KB article - [How to display few cells of a columns have different foreground along with underline based on a condition in WPF DataGrid (SfDataGrid)?](https://www.syncfusion.com/kb/11887/how-to-display-few-cells-of-a-columns-have-different-foreground-along-with-underline-based)
+
 ## Requirements to run the demo
  Visual Studio 2015 and above versions
