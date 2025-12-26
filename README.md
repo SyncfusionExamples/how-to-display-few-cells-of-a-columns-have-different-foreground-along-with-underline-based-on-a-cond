@@ -1,11 +1,10 @@
-# How to display few cells of a columns have different foreground along with underline based on a condition in WPF DataGrid (SfDataGrid)?
+# How to Display Few Cells of a Columns have Different Foreground Along with Underline Based on a Condition in WPF DataGrid?
 
-This sample show cases how to apply the conditional styling for grid columns in [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid)?
+This sample show cases how to apply the conditional styling for grid columns in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid).
 
-# About the sample
+You can apply the conditional styling for [GridColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridColumn.html) by using converter and [CellTemplate](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfGrid.WPF~Syncfusion.UI.Xaml.Grid.GridColumnBase~CellTemplate.html) in `DataGrid`.
 
-You can apply the conditional styling for [GridColumn](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfGrid.WPF~Syncfusion.UI.Xaml.Grid.GridColumn.html) by using converter and [CellTemplate](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfGrid.WPF~Syncfusion.UI.Xaml.Grid.GridColumnBase~CellTemplate.html) in [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid) (SfDataGrid).
-
+#### XAML
 ```xml
 <Window.Resources>
     <local:WbsElementToHyperLinkConverter x:Key="WbsElementToHyperLinkConverter"/>
@@ -21,6 +20,8 @@ You can apply the conditional styling for [GridColumn](https://help.syncfusion.c
     </syncfusion:GridTextColumn.CellTemplate>
 </syncfusion:GridTextColumn>
 ```
+
+#### C#
 ```c#
 public class WbsElementToHyperLinkConverter : IValueConverter
 {
@@ -45,7 +46,4 @@ public class WbsElementToHyperLinkConverter : IValueConverter
 }
 ```
 
-KB article - [How to display few cells of a columns have different foreground along with underline based on a condition in WPF DataGrid (SfDataGrid)?](https://www.syncfusion.com/kb/11887/how-to-display-few-cells-of-a-columns-have-different-foreground-along-with-underline-based)
-
-## Requirements to run the demo
- Visual Studio 2015 and above versions
+![DataGrid with conditional styling applied](ConditionalStyling.png)
